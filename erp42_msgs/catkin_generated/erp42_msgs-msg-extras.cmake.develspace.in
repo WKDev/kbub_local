@@ -1,0 +1,2 @@
+set(erp42_msgs_MESSAGE_FILES "/home/parallels/erp42_melodic_ws/src/ERP42-ROS/packages/erp42_msgs/msg/CmdControl.msg;/home/parallels/erp42_melodic_ws/src/ERP42-ROS/packages/erp42_msgs/msg/DriveCmd.msg;/home/parallels/erp42_melodic_ws/src/ERP42-ROS/packages/erp42_msgs/msg/ModeCmd.msg;/home/parallels/erp42_melodic_ws/src/ERP42-ROS/packages/erp42_msgs/msg/CANFeedBack.msg;/home/parallels/erp42_melodic_ws/src/ERP42-ROS/packages/erp42_msgs/msg/SerialFeedBack.msg")
+set(erp42_msgs_SERVICE_FILES "")

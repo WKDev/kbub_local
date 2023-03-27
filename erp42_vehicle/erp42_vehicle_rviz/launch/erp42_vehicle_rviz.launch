@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- Display the robot model in rviz.
+-->
+<launch>
+    <arg name="model" default="$(find erp42_vehicle_description)/urdf/erp42_vehicle.urdf.xacro" />
+    <arg name="use_gui" default="true" />
+    <arg name="rvizconfig" default="$(find erp42_vehicle_rviz)/rviz/model.rviz" />
+
+    <!-- Load the robot description -->
+    <include file="$(find erp42_vehicle_description)/launch/erp42_vehicle_description.launch">
+        <arg name="model" value="$(arg model)" />
+    </include>
+
+    <!-- Publish joint states -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="use_gui" value="$(arg use_gui)" />
+    </node>
+
+    <!-- chsonaddition230309 -->
+      <arg name="urdf_file" default="$(find erp42_vehicle_description)/urdf/erp42_vehicle.urdf.xacro"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen">
+    <param name="publish_frequency" value="50"/>
+    <param name="tf_prefix" value=""/>
+    <param name="use_tf_static" value="false"/>
+    <param name="robot_description" command="$(find xacro)/xacro $(arg model)"/>
+  </node>
+
+  
+  <!-- chsonaddition230309 -->
+
+    <!-- Publish robot state -->
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /> -->
+
+    <!-- Open rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+  
+
+</launch>

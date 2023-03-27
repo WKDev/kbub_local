@@ -1,0 +1,8 @@
+prefix=/home/parallels/erp42_melodic_ws/install
+
+Name: erp42_teleop
+Description: Description of erp42_teleop
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: rospy geometry_msgs ackermann_msgs erp42_msgs

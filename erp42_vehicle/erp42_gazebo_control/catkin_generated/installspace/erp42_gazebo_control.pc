@@ -1,0 +1,8 @@
+prefix=/home/parallels/erp42_melodic_ws/install
+
+Name: erp42_gazebo_control
+Description: Description of erp42_gazebo_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
