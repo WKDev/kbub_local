@@ -7,8 +7,6 @@
     <!-- namespace [/erp42_serial, or /erp42_can] -->
     <arg name="namespace" default="/erp42_serial" />
 
-
-
     <group ns="$(arg namespace)">
         <!-- erp42_serial_bridge launch -->
         <!-- <node pkg="erp42_serial" name="erp42_serial_node" type="erp42_serial_node" output="screen">
@@ -43,15 +41,6 @@
     <rosparam file="$(find erp42_gazebo_control)/config/ctrl_gains.yaml" command="load" ns="$(arg namespace)" />
     <rosparam file="$(find erp42_gazebo_control)/config/ctrl_joint_state_publisher.yaml" command="load" ns="$(arg namespace)" />
     <rosparam file="$(find erp42_gazebo_control)/config/ctrl_steer_bot_hardware_gazebo.yaml" command="load" ns="$(arg namespace)" /> -->
-
-          <!-- Spawn the controllers -->
-    <node pkg="controller_manager" type="spawner" name="base_controller_spawner"
-    args="joint_state_publisher " />
-
-    <!-- Publish joint states -->
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <param name="use_gui" value="$(arg use_gui)" />
-    </node>
 
     <!-- Load the robot description -->
     <include file="$(find erp42_vehicle_description)/launch/erp42_vehicle_description.launch">

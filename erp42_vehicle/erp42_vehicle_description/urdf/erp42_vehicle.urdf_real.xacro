@@ -29,11 +29,11 @@ https://github.com/CIR-KIT/steer_drive_ros/blob/kinetic-devel/steer_drive_contro
   <gazebo>
     <!-- Load ros_control plugin using the steer_bot_hardware_gazebo
     implementation of the hardware_interface::RobotHW -->
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <!-- <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"> -->
       <!-- <robotNamespace>${robot_namespace}</robotNamespace> -->
-      <robotSimType>erp42_hardware_gazebo/ERP42HardwareGazebo</robotSimType>
-      <legacyModeNS>false</legacyModeNS>
-    </plugin>
+      <!-- <robotSimType>erp42_hardware_gazebo/ERP42HardwareGazebo</robotSimType> -->
+      <!-- <legacyModeNS>false</legacyModeNS> -->
+    <!-- </plugin> -->
   </gazebo>
 
   <!-- added xacro for VLP16-chanhyeokson -->
