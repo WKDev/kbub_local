@@ -29,7 +29,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud2
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -119,14 +119,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        map:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        odom:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         rear_left_wheel_link:
           Alpha: 1
           Show Axes: false
@@ -181,8 +173,6 @@ Visualization Manager:
           Value: true
         imu_link:
           Value: true
-        map:
-          Value: true
         odom:
           Value: true
         rear_left_wheel_link:
@@ -202,32 +192,31 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              camera_link:
+        odom:
+          base_link:
+            camera_link:
+              {}
+            front_left_steer_link:
+              front_left_wheel_link:
                 {}
-              front_left_steer_link:
-                front_left_wheel_link:
-                  {}
-              front_right_steer_link:
-                front_right_wheel_link:
-                  {}
-              front_steer_link:
+            front_right_steer_link:
+              front_right_wheel_link:
                 {}
-              gps_link:
+            front_steer_link:
+              {}
+            gps_link:
+              {}
+            imu_link:
+              {}
+            rear_left_wheel_link:
+              {}
+            rear_right_wheel_link:
+              {}
+            rear_wheel_link:
+              {}
+            velodyne_base_link:
+              velodyne:
                 {}
-              imu_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
-              rear_wheel_link:
-                {}
-              velodyne_base_link:
-                velodyne:
-                  {}
       Update Interval: 0
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -380,7 +369,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.749053955078125
+      Distance: 23.724767684936523
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -419,4 +408,4 @@ Window Geometry:
     collapsed: false
   Width: 1206
   X: 351
-  Y: 56
+  Y: 27
